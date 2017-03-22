@@ -11,10 +11,12 @@ import javax.ws.rs.core.Response;
  */
 @Path("/hello")
 public class HelloWorldService {
+
+    public static final String MESSAGE = "Hello world";
+
     @GET
     public Response hello() {
-        String output = "Hello world";
-        return Response.ok(output).build();
+        return Response.ok(MESSAGE).build();
     }
 }
 
